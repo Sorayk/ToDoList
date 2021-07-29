@@ -1,14 +1,39 @@
+import React, { useState } from "react";
+
+import NewTaskInput from "../src/components/js/NewTaskInput";
+import ExercisesList from "../src/components/js/ExercisesList";
+import Logo from "../src/components/js/Logo";
+
 import "./App.css";
 import "./components/css/resetter.css";
-import Logo from "./components/js/Logo";
 
 function App() {
+  const [tasks, setTasks] = useState([]);
+
+  const addNewTask = (newTaskText) => {
+    const newTasks = [
+      ...tasks,
+      {
+        text: newTaskText,
+        status: "in progress",
+      },
+    ];
+
+    setTasks(newTasks);
+  };
+
   return (
     <div className="daddy-div">
-      <header className="logo">
+      <header className="top-section">
         <Logo />
+        <NewTaskInput action={addNewTask} />
       </header>
-      <main></main>
+      <main>
+        <div className="program__today">
+          <ExercisesList tasks={tasks} />
+        </div>
+        <div className="program__done"></div>
+      </main>
       <footer className="footsie"></footer>
     </div>
   );

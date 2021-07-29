@@ -1,0 +1,62 @@
+.text-field {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  font-family: sans-serif;
+}
+
+input {
+  width: 100%;
+  margin-right: 1em;
+  padding: 0.75em;
+  border-radius: 5px;
+  display: inline-block;
+  border: thin solid #fafafa;
+  border-bottom: solid medium #999;
+  color: #444;
+  font-size: 0.5em;
+}
+
+@media only screen and (min-width: 440px) {
+  /* For desktop: */
+  input {
+    font-size: 1em;
+  }
+}
+
+label {
+  color: #999;
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 10px;
+  transition: 0.2s;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  top: -10px;
+  left: 15px;
+  font-size: small;
+  font-family: sans-serif;
+  color: rgb(129, 122, 122);
+  background-color: #fff;
+  padding: 0 5px 0 5px;
+}
+
+input.responsive::-webkit-input-placeholder,
+input.responsive::-moz-placeholder,
+input.responsive:-moz-placeholder,
+input.responsive:-ms-input-placeholder {
+  color: rgba(25, 25, 25, 1);
+}
+
+@media (max-width: 399px) {
+  input.responsive::-webkit-input-placeholder,
+  input.responsive::-moz-placeholder,
+  input.responsive:-moz-placeholder,
+  input.responsive:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0);
+  }
+}

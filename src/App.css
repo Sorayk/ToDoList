@@ -1,5 +1,22 @@
 .daddy-div {
   background-color: #fdfdfd;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 70%;
+  margin: 0 auto;
+  height: 500px;
+  display: flex;
+}
+
+.program__today {
+  border: 1px solid #000;
+  width: 49%;
+}
+
+.program__done {
+  border: 1px solid #000;
+  width: 49%;
 }
