@@ -1,28 +1,23 @@
 import "../css/DropDownBtn.css";
 import React, { useState } from "react";
 
-
 const DropDownBtn = () => {
-    return(
-        <div className="menu-container">
-                <select id="weekdays" required>
-                    <option className="option" value=""disabled selected>ASSIGN WEEKDAY</option>
-                    <option value="Monday">Monday</option>
-                    <option value="Tuesday">Tuesday</option>
-                    <option value="Wednesday">Wednesday</option>
-                    <option value="Thursday">Thursday</option>
-                    <option value="Friday">Friday</option>
-                    <option value="Saturday">Saturday</option>
-                    <option value="Sunday">Sunday</option>
-                </select>
-        </div>
-    );
-    }
-export default DropDownBtn; 
-
-
-
-
+  return (
+    <select id="weekdays" required>
+      <option className="option" value="" disabled selected>
+        ASSIGN WEEKDAY
+      </option>
+      <option value="Monday">Monday</option>
+      <option value="Tuesday">Tuesday</option>
+      <option value="Wednesday">Wednesday</option>
+      <option value="Thursday">Thursday</option>
+      <option value="Friday">Friday</option>
+      <option value="Saturday">Saturday</option>
+      <option value="Sunday">Sunday</option>
+    </select>
+  );
+};
+export default DropDownBtn;
 
 /* FIRST TRY
 

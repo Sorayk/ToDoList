@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import DropDownBtn from "./DropDownBtn";
 
 import "../css/NewTaskInput.css";
 
@@ -29,6 +30,7 @@ function NewTaskInput({ action }) {
         required
       />
       <label>Add Exercise</label>
+      <DropDownBtn />
       <button onClick={onClick}>Assign</button>
     </div>
   );

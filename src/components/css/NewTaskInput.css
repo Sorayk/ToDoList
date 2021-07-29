@@ -15,13 +15,19 @@ input {
   border: thin solid #fafafa;
   border-bottom: solid medium #999;
   color: #444;
-  font-size: 0.5em;
 }
 
-@media only screen and (min-width: 440px) {
-  /* For desktop: */
+@media only screen and (max-width: 800px) {
+  .text-field {
+    flex-direction: column;
+  }
+
   input {
-    font-size: 1em;
+    margin-bottom: 1em;
+  }
+
+  button {
+    margin: 1em 0;
   }
 }
 
@@ -43,20 +49,4 @@ input:valid ~ label {
   color: rgb(129, 122, 122);
   background-color: #fff;
   padding: 0 5px 0 5px;
-}
-
-input.responsive::-webkit-input-placeholder,
-input.responsive::-moz-placeholder,
-input.responsive:-moz-placeholder,
-input.responsive:-ms-input-placeholder {
-  color: rgba(25, 25, 25, 1);
-}
-
-@media (max-width: 399px) {
-  input.responsive::-webkit-input-placeholder,
-  input.responsive::-moz-placeholder,
-  input.responsive:-moz-placeholder,
-  input.responsive:-ms-input-placeholder {
-    color: rgba(0, 0, 0, 0);
-  }
 }
