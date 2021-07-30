@@ -1,6 +1,9 @@
 .logo-container {
   width: 40%;
-  margin: 1em auto;
+  margin: 1em auto 2em;
   height: 200px;
-  background-color: rgb(36, 31, 31);
+  background-color: #fdfdfd;
+  display: flex;
+  justify-content: center;
+  border: none;
 }
