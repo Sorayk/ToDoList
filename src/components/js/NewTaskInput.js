@@ -7,7 +7,6 @@ function NewTaskInput({ action }) {
   const inputEl = useRef(null);
 
   const onTyping = (e) => {
-    console.log(e);
     const { keyCode, target } = e;
     if (keyCode === 13) {
       action(target.value);
