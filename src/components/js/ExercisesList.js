@@ -1,11 +1,15 @@
-import Task from "./Task";
 
-function ExercisesList({ tasks }) {
+function ExercisesList({handleFinishedTask, removeTask ,tasks }) {
+
   return (
     <>
       <ul className="TaskList">
         {tasks.map((task, index) => (
-          <Task text={task.text} key={index} />
+          <li key={index}>
+            <button onClick={() => {removeTask(index)}}>-</button>
+            {task.text}
+            <button onClick={() => {handleFinishedTask(index)}}>Done</button>
+          </li>
         ))}
       </ul>
     </>

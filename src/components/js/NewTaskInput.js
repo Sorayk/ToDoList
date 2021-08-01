@@ -3,34 +3,40 @@ import DropDownBtn from "./DropDownBtn";
 
 import "../css/NewTaskInput.css";
 
-function NewTaskInput({ action }) {
-  const inputEl = useRef(null);
+function NewTaskInput({ addNewTask }) {
+  const textInput = useRef(null);
 
-  const onTyping = (e) => {
-    const { keyCode, target } = e;
+  const onTyping = (event) => {
+    // get the pressed key from the event object
+    const keyCode = event.keyCode;
+
+    // if the user presses enter
     if (keyCode === 13) {
-      action(target.value);
-      target.value = "";
+     assignText();
     }
   };
 
-  const onClick = () => {
-    action(inputEl.current.value);
-    inputEl.current.value = "";
+  const assignText = () => {
+    // add the input text to the array if the input is not empty
+    if (textInput.current.value !== '') {
+      addNewTask(textInput.current.value);
+      // reset the input
+      textInput.current.value = '';
+    }
   };
 
   return (
     <div className="text-field">
       <input
-        onKeyDown={onTyping}
+        onKeyDown={(event) => onTyping(event)}
         // placeholder="Add Exercise"
         type="text"
-        ref={inputEl}
+        ref={textInput}
         required
       />
       <label>Add Exercise</label>
       <DropDownBtn />
-      <button onClick={onClick}>Assign</button>
+      <button onClick={assignText}>Assign</button>
     </div>
   );
 }
