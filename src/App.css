@@ -1,7 +1,9 @@
 .daddy-div {
   background-color: #fdfdfd;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  background-image: url(../src/images/pic2.jpg);
+  background-position: center;
 }
 
 main {
@@ -12,12 +14,13 @@ main {
 }
 
 .program__today {
-  border: 1px solid #000;
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.45);
   width: 49%;
 }
 
 .program__done {
-  border: 1px solid #000;
+  background-color: rgba(255, 255, 255, 0.45);
+  border: 1px solid #fff;
   width: 49%;
 }
-
