@@ -1,8 +1,8 @@
 .logo-container {
   width: 40%;
-  margin: 1em auto 2em;
+  margin: 0 auto 2em;
   height: 200px;
-  background-color: #fdfdfd;
+  padding-top: 1em;
   display: flex;
   justify-content: center;
   border: none;

@@ -45,7 +45,7 @@ input:valid ~ label {
   left: 15px;
   font-size: small;
   font-family: sans-serif;
-  color: rgb(129, 122, 122);
-  background-color: #fff;
+  color: LightGray;
+  background-color: black;
   padding: 0 5px 0 5px;
 }

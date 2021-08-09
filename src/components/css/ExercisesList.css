@@ -1,74 +1,63 @@
-
-
-.TaskList li {  
+.task__list li {  
   border: 1px solid rgb(13, 14, 13);
   color: rgb(5, 5, 5);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-family: sans-serif;
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  padding: 5px;
-  border-radius: 15px;
-}
-.button__delete {
-  font-size: 20px;
   margin: 10px;
-  width: 40px;
-  /* background-color:;  */
-  color: rgb(12, 12, 11);
+  padding: 1%;
+  border-radius: 15px;
+  font-size: 20px;
+  background-color: Gainsboro;
+}
+.task__remove {
+  font-size: 20px;
+  width: 45px;
+  height: 45px;
+  background-color: white;
   border-radius: 50%;
-  outline: 0;
-  text-transform: uppercase;
   cursor: pointer;
 }
 
-.button__done {
+.task__done {
   justify-items: right;
   border-radius: 15px;
   font-size:12px;
   font-family: sans-serif;
   text-align: center;
-  margin: 10px;
   width: 80px;
-  /* background-color: ;  */
-  color: rgb(12, 12, 12);
-  padding: 3px 5px;
-  border-radius: 5px;
-  outline: 0;
-  text-transform: uppercase;
-  cursor: pointer;  
-   
-}
-
-
- .TaskList button:hover {
-    background-color: #78909c;
-  }
-
-.para {
-
-  font-size:30px;
-  font-family: sans-serif;
-  margin: 5px;
-  border-radius: 15px;
+  background-color: white;
   padding: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-right: 3px;
 }
 
-.FinishedTaskList li {
+
+.TaskList button:hover {
+  background-color: #78909c;
+}
+
+
+.task__finished-list li {
   border: 1px solid rgb(13, 14, 13);
-  color: rgb(5, 5, 5);
-  display: flex;
-  justify-content: space-between;
+  color: whitesmoke;
   font-family: sans-serif;
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  padding: 5px;
+  text-align: center;
+  margin: 10px;
   border-radius: 15px;
-  font-size: 25px;
-  padding: 18px;
+  font-size: 20px;
+  padding: 19px;
+  background-color: #757575;
+}
+
+.title {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: black;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 10px;
 }
