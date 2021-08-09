@@ -2,11 +2,9 @@ function FinishedTasks({finishedTasks }) {
 
   return (
     <>
-      <ul className="TaskList">
+      <ul className="FinishedTaskList">
         {finishedTasks.map((task, index) => (
-          <li key={index}>
-            {task.text}
-          </li>
+          <li key={index}>{task.text}</li>
         ))}
       </ul>
     </>

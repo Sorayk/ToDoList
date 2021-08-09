@@ -1,4 +1,4 @@
-
+import "../css/ExercisesList.css";
 function ExercisesList({handleFinishedTask, removeTask ,tasks }) {
 
   return (
@@ -6,9 +6,21 @@ function ExercisesList({handleFinishedTask, removeTask ,tasks }) {
       <ul className="TaskList">
         {tasks.map((task, index) => (
           <li key={index}>
-            <button onClick={() => {removeTask(index)}}>-</button>
-            {task.text}
-            <button onClick={() => {handleFinishedTask(index)}}>Done</button>
+            <button className="button__delete"
+              onClick={() =>
+              {
+                removeTask(index)
+              }}>
+              -
+            </button>
+            <p className="para">{task.text}</p>
+            <button className="button__done"
+              onClick={() => {
+                handleFinishedTask(index)
+              }}
+            >
+              Done
+            </button>
           </li>
         ))}
       </ul>

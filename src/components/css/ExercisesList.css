@@ -1,0 +1,74 @@
+
+
+.TaskList li {  
+  border: 1px solid rgb(13, 14, 13);
+  color: rgb(5, 5, 5);
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 15px;
+}
+.button__delete {
+  font-size: 20px;
+  margin: 10px;
+  width: 40px;
+  /* background-color:;  */
+  color: rgb(12, 12, 11);
+  border-radius: 50%;
+  outline: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button__done {
+  justify-items: right;
+  border-radius: 15px;
+  font-size:12px;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 10px;
+  width: 80px;
+  /* background-color: ;  */
+  color: rgb(12, 12, 12);
+  padding: 3px 5px;
+  border-radius: 5px;
+  outline: 0;
+  text-transform: uppercase;
+  cursor: pointer;  
+   
+}
+
+
+ .TaskList button:hover {
+    background-color: #78909c;
+  }
+
+.para {
+
+  font-size:30px;
+  font-family: sans-serif;
+  margin: 5px;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.FinishedTaskList li {
+  border: 1px solid rgb(13, 14, 13);
+  color: rgb(5, 5, 5);
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 15px;
+  font-size: 25px;
+  padding: 18px;
+}

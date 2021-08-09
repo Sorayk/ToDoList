@@ -14,10 +14,14 @@ main {
 .program__today {
   border: 1px solid #000;
   width: 49%;
+  border-radius: 10px;
+  margin-right: 10px;
 }
 
 .program__done {
   border: 1px solid #000;
   width: 49%;
+  border-radius: 10px;
+  margin-left: 10px;
 }
 
