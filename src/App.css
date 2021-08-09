@@ -1,7 +1,7 @@
 .daddy-div {
   background-color: #fdfdfd;
   width: 100%;
-  height: 100vh;
+  height: 100vw;
   background-image: url(../src/images/pic2.jpg);
   background-position: center;
 }
@@ -9,7 +9,7 @@
 main {
   width: 70%;
   margin: 0 auto;
-  height: 500px;
+  min-height: 500px;
   display: flex;
 }
 
@@ -17,10 +17,14 @@ main {
   border: 1px solid #fff;
   background-color: rgba(255, 255, 255, 0.45);
   width: 49%;
+  border-radius: 10px;
+  margin-right: 10px;
 }
 
 .program__done {
   background-color: rgba(255, 255, 255, 0.45);
   border: 1px solid #fff;
   width: 49%;
+  border-radius: 10px;
+  margin-left: 10px;
 }

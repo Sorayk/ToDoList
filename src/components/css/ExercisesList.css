@@ -1,6 +1,63 @@
-.task__done {
-  padding: 0.5em;
+.task__list li {  
+  border: 1px solid rgb(13, 14, 13);
+  color: rgb(5, 5, 5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: sans-serif;
+  margin: 10px;
+  padding: 1%;
+  border-radius: 15px;
+  font-size: 20px;
+  background-color: Gainsboro;
+}
+.task__remove {
+  font-size: 20px;
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.task__remove {
+.task__done {
+  justify-items: right;
+  border-radius: 15px;
+  font-size:12px;
+  font-family: sans-serif;
+  text-align: center;
+  width: 80px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-right: 3px;
+}
+
+
+.TaskList button:hover {
+  background-color: #78909c;
+}
+
+
+.task__finished-list li {
+  border: 1px solid rgb(13, 14, 13);
+  color: whitesmoke;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 10px;
+  border-radius: 15px;
+  font-size: 20px;
+  padding: 19px;
+  background-color: #757575;
+}
+
+.title {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: black;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 10px;
 }

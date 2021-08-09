@@ -3,7 +3,8 @@ import "../css/ExercisesList.css";
 function ExercisesList({ handleFinishedTask, removeTask, tasks }) {
   return (
     <>
-      <ul className="TaskList">
+       <h1 className="title">To Do</h1>
+      <ul className="task__list">
         {tasks.map((task, index) => (
           <li key={index}>
             <button
