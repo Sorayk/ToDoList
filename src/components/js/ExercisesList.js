@@ -1,14 +1,28 @@
+import "../css/ExercisesList.css";
 
-function ExercisesList({handleFinishedTask, removeTask ,tasks }) {
-
+function ExercisesList({ handleFinishedTask, removeTask, tasks }) {
   return (
     <>
       <ul className="TaskList">
         {tasks.map((task, index) => (
           <li key={index}>
-            <button onClick={() => {removeTask(index)}}>-</button>
+            <button
+              className="task__remove"
+              onClick={() => {
+                removeTask(index);
+              }}
+            >
+              -
+            </button>
             {task.text}
-            <button onClick={() => {handleFinishedTask(index)}}>Done</button>
+            <button
+              className="task__done"
+              onClick={() => {
+                handleFinishedTask(index);
+              }}
+            >
+              Done
+            </button>
           </li>
         ))}
       </ul>

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const DropDownBtn = () => {
   return (
     <select id="weekdays" required>
-      <option className="option" value="" disabled selected>
+      <option className="option" value="" hidden>
         ASSIGN WEEKDAY
       </option>
       <option value="Monday">Monday</option>
