@@ -10,7 +10,7 @@ function ExercisesList({ handleFinishedTask, removeTask, tasks }) {
             <button
               className="task__remove"
               onClick={() => {
-                removeTask(index);
+                removeTask(task.id);
               }}
             >
               -
@@ -19,7 +19,7 @@ function ExercisesList({ handleFinishedTask, removeTask, tasks }) {
             <button
               className="task__done"
               onClick={() => {
-                handleFinishedTask(index);
+                handleFinishedTask(task.id);
               }}
             >
               Done

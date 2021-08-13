@@ -6,9 +6,12 @@
   background-position: center;
 }
 
-main {
+.react-tabs {
   width: 70%;
   margin: 0 auto;
+}
+
+main {
   min-height: 500px;
   display: flex;
 }

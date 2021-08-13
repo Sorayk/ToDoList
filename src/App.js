@@ -1,26 +1,24 @@
 import React, { useState } from "react";
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css'
+import { v4 as uuidv4 } from 'uuid';
 
 import NewTaskInput from "../src/components/js/NewTaskInput";
-import ExercisesList from "../src/components/js/ExercisesList";
 import Logo from "../src/components/js/Logo";
-import FinishedTasks from "./components/js/FinishedTasks";
 import Background from "./components/js/Background";
+import Main from './components/js/Main';
+import { taskStatus, MONDAY, TUESDAY } from './constants'
 
 import "./App.css";
 import "./components/css/resetter.css";
 
 function App() {
   const [tasks, setTasks] = useState([]);
-  const [finishedTasks, setFinishedTasks] = useState([]);
-  const [newTaskDay, setNewTaskDay] = useState('Monday')
-
-  const taskStatus = {
-    inProgress: "in Progress",
-    done: "done",
-  };
+  const [newTaskDay, setNewTaskDay] = useState(MONDAY)
 
   const addNewTask = (newTaskText) => {
     const newTask = {
+      id: uuidv4(),
       text: newTaskText,
       status: taskStatus.inProgress,
       day: newTaskDay
@@ -32,23 +30,20 @@ function App() {
     ]);
   };
 
-  const removeTask = (index) => {
-    const newTasks = [...tasks];
-    newTasks.splice(index, 1);
+  const removeTask = (id) => {
+    const newTasks = tasks.filter((task) => task.id !== id)
     setTasks(newTasks);
   };
 
-  const handleFinishedTask = (index) => {
+  const handleFinishedTask = (id) => {
     // take current task from tasks array
-    const task = tasks.find((task, k) => k === index);
-    // change status to 'done'
-    task.status = taskStatus.done;
-
-    // push it in finishedTasks array
-    setFinishedTasks((previousTasks) => [...previousTasks, task]);
-    // remove current Task from tasks array
-    removeTask(index);
-    console.log(task);
+    const newTasks = tasks.map((task) => {
+      return {
+        ...task,
+        status: task.id === id ? taskStatus.done : task.status
+      }
+    })
+    setTasks(newTasks)
   };
 
   const onChangeNewTaskDay = (day) => {
@@ -65,19 +60,29 @@ function App() {
           onChangeDay={onChangeNewTaskDay}
         />
       </header>
-      <main>
-        <div className="program__today">
-          <ExercisesList
-            handleFinishedTask={handleFinishedTask}
-            removeTask={removeTask}
-            tasks={tasks}
-          />
-        </div>
-        <div className="program__done">
-          <FinishedTasks finishedTasks={finishedTasks} />
-        </div>
-      </main>
-    </div>
+        <Tabs>
+          <TabList>
+            <Tab>Monday</Tab>
+            <Tab>Tuesday</Tab>
+          </TabList>
+
+          <TabPanel>
+            <Main
+              removeTask={removeTask}
+              handleFinishedTask={handleFinishedTask}
+              tasks={tasks.filter((task) => task.day === MONDAY)}
+            />
+          </TabPanel>
+          <TabPanel>
+            <Main
+              removeTask={removeTask}
+              handleFinishedTask={handleFinishedTask}
+              tasks={tasks.filter((task) => task.day === TUESDAY)}
+            />
+          </TabPanel>
+        </Tabs>
+ 
+      </div>
   );
 }
 
