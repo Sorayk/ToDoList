@@ -3,7 +3,7 @@ import DropDownBtn from "./DropDownBtn";
 
 import "../css/NewTaskInput.css";
 
-function NewTaskInput({ addNewTask }) {
+function NewTaskInput({ addNewTask, onChangeDay }) {
   const textInput = useRef(null);
 
   const onTyping = (event) => {
@@ -35,7 +35,7 @@ function NewTaskInput({ addNewTask }) {
         required
       />
       <label>Add Exercise</label>
-      <DropDownBtn />
+      <DropDownBtn onChange={onChangeDay} />
       <button onClick={assignText}>Assign</button>
     </div>
   );

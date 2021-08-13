@@ -12,18 +12,23 @@ import "./components/css/resetter.css";
 function App() {
   const [tasks, setTasks] = useState([]);
   const [finishedTasks, setFinishedTasks] = useState([]);
+  const [newTaskDay, setNewTaskDay] = useState('Monday')
+
   const taskStatus = {
     inProgress: "in Progress",
     done: "done",
   };
 
   const addNewTask = (newTaskText) => {
+    const newTask = {
+      text: newTaskText,
+      status: taskStatus.inProgress,
+      day: newTaskDay
+    }
+    console.log(newTask)
     setTasks((previousTasks) => [
       ...previousTasks,
-      {
-        text: newTaskText,
-        status: taskStatus.inProgress,
-      },
+      newTask
     ]);
   };
 
@@ -46,11 +51,19 @@ function App() {
     console.log(task);
   };
 
+  const onChangeNewTaskDay = (day) => {
+    setNewTaskDay(day)
+  } 
+
+  console.log(tasks)
   return (
     <div className="daddy-div">
       <header className="top-section">
         <Logo />
-        <NewTaskInput addNewTask={addNewTask} />
+        <NewTaskInput
+          addNewTask={addNewTask}
+          onChangeDay={onChangeNewTaskDay}
+        />
       </header>
       <main>
         <div className="program__today">

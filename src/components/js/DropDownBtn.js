@@ -1,12 +1,16 @@
 import "../css/DropDownBtn.css";
 
 
-const DropDownBtn = () => {
+const DropDownBtn = ({ onChange }) => {
   return (
-    <select id="weekdays" required>
-      <option className="option" value="" hidden>
+    <select 
+      id="weekdays"
+      required
+      onChange={(e) => onChange(e.target.value)}
+    >
+      {/* <option className="option" value="" hidden>
         ASSIGN WEEKDAY
-      </option>
+      </option> */}
       <option value="Monday">Monday</option>
       <option value="Tuesday">Tuesday</option>
       <option value="Wednesday">Wednesday</option>
